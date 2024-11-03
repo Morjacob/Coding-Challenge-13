@@ -19,10 +19,7 @@ function fetchProducts() {
                     const productDiv = document.createElement('div');
                     productDiv.classList.add('product');
 
-                    const productName = product.name || 'Unknown Product';
-                    const productPrice = product.price || 'N/A';
-                    const productImage = product.image || 'default-image.jpg';
-
+                
                     productDiv.innerHTML = `
                         <h2>${productName}</h2>
                         <p>Price: $${productPrice}</p>
