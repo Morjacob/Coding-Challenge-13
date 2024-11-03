@@ -41,4 +41,4 @@ function displayProducts(products) {
 }
 
 
-document.addEventListener('DOMContentLoaded', fetchProducts);
+document.addEventListener('DOMContentLoaded', fetchProduct);
