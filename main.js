@@ -25,7 +25,7 @@ const fetchProduct = document.getElementById(`product-container`);
         function displayProducts(products) {
             const productHTML = products.map(product => `
                 <div class="Product">
-                    <h3>company name: ${company}</h3>
+                    <h3>company name: ${product.company}</h3>
                     <p><strong>product price:</strong> User ${product.price}</p>
                     <p><strong>productimage:</strong> ${product.image}</p>
                     <p><strong>product name:</strong> ${product.name}</p>
