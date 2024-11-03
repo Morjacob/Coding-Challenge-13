@@ -22,16 +22,18 @@ const fetchProduct = document.getElementById(`product-container`);
         });
 
 
-        fetchProduct.innerHTML = fetchProduct.map(product => `
-            <div class="Product">
-                <h3>Ticket ID: ${product.id}</h3>
-                <p><strong>product price:</strong> User ${product.price}</p>
-                <p><strong>productimage:</strong> ${product.image}</p>
-                <p><strong>product name:</strong> ${product.name}</p>
-            </div>
-        `).join('');
-
-
+        function displayProducts(products) {
+            const productHTML = products.map(product => `
+                <div class="Product">
+                    <h3>Ticket ID: ${product.id}</h3>
+                    <p><strong>product price:</strong> User ${product.price}</p>
+                    <p><strong>productimage:</strong> ${product.image}</p>
+                    <p><strong>product name:</strong> ${product.name}</p>
+                </div>
+            `).join('');
+        
+            document.getElementById('product-container').innerHTML = productHTML;
+        }
 
 
 document.addEventListener('DOMContentLoaded', fetchProduct);
