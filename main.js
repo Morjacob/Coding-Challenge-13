@@ -33,10 +33,9 @@ function fetchProducts() {
             });
         })
         .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-            document.getElementById('product-container').innerHTML = '<p>Failed to load products. Please try again later.</p>';
+            console.error('Error with fetch function', error);
+            document.getElementById('product-container').innerHTML = '<p>Failed to fetch products. </p>';
         });
 }
-
-document.addEventListener('DOMContentLoaded', fetchProducts);
+fetchProducts();
 
