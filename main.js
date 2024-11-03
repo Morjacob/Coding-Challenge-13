@@ -38,3 +38,4 @@ function fetchProducts() {
 
 
 fetchProducts();
+console.log(data)
