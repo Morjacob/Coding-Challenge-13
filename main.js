@@ -1,7 +1,7 @@
+const apiUrl = 'https://www.course-api.com/javascript-store-products';
 
 function fetchProducts() {
-    const apiUrl = 'https://www.course-api.com/javascript-store-products';
-
+    
     fetch(apiUrl)
         .then(response => {
             
