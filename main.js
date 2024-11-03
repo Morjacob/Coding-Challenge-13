@@ -24,12 +24,12 @@ const fetchProduct = document.getElementById(`product-container`);
 
         function displayProducts(products) {
             const productHTML = products.map(product => `
-                <div class="Product">
-                    <h3>company name: ${product.fields}</h3>
-                    <p><strong>product price:</strong> User ${product.price}</p>
-                    <p><strong>productimage:</strong> ${product.image}</p>
-                    <p><strong>product name:</strong> ${product.name}</p>
-                </div>
+                  <img src="${productImageUrl}" alt="${name}" class="product-image" />
+            <div class="product-details">
+                <h2>${name}</h2>
+                <p><strong>Company:</strong> ${company}</p>
+                <p><strong>Price:</strong> $${price}</p>
+            </div>
             `).join('');
         
             document.getElementById('product-container').innerHTML = productHTML;
