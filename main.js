@@ -21,9 +21,9 @@ function fetchProducts() {
 
                 
                     productDiv.innerHTML = `
-                        <h2>${productName}</h2>
-                        <p>Price: $${productPrice}</p>
-                        <img src="${productImage}" alt="${productName}" />
+                        <h2>${product.Name}</h2>
+                        <p>Price: $${product.Price}</p>
+                        <img src="${product.Image}" alt="${product.Name}" />
                     `;
 
                     productContainer.appendChild(productDiv);
