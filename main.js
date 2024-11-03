@@ -38,3 +38,5 @@ function fetchProducts() {
             productContainer.innerHTML = '<p>Failed to load products.</p>';
         });
 }
+
+fetchProducts();
