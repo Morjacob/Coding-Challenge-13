@@ -1,8 +1,11 @@
-const apiUrl = 'https://www.course-api.com/javascript-store-products';
 
-function fetchProducts() {
-    
-    fetch(apiUrl)
+
+
+const fetchProduct = document.getElementById(`product-container`);
+
+
+
+    fetch('https://www.course-api.com/javascript-store-products')
         .then(response => {
             
             if (!response.ok) {
@@ -15,9 +18,9 @@ function fetchProducts() {
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
-            document.getElementById('product-container').innerHTML = '<p>Failed to load products. Please try again later.</p>';
+            document.getElementById('product-container').innerHTML = '<p>Failed to load products</p>';
         });
-}
+
 
 function displayProducts(products) {
     const productContainer = document.getElementById('product-container');
