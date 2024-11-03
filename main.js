@@ -22,23 +22,17 @@ const fetchProduct = document.getElementById(`product-container`);
         });
 
 
-function displayProducts(products) {
-    const productContainer = document.getElementById('product-container');
-    productContainer.innerHTML = ''; 
+        fetchProduct.innerHTML = fetchProduct.map(product => `
+            <div class="Product">
+                <h3>Ticket ID: ${product.id}</h3>
+                <p><strong>product price:</strong> User ${product.price}</p>
+                <p><strong>productimage:</strong> ${product.image}</p>
+                <p><strong>product name:</strong> ${product.name}</p>
+            </div>
+        `).join('');
 
-    products.forEach(product => {
-       
-        const productCard = document.createElement('div');
-        productCard.className = 'product-card';
-        productCard.innerHTML = `
-            <h2>${product.name}</h2>
-            <p>Price: $${product.price}</p>
-            <img src="${product.image}" alt="${product.name}" />
-            <p>${product.description}</p>
-        `;
-        productContainer.appendChild(productCard);
-    });
-}
+
 
 
 document.addEventListener('DOMContentLoaded', fetchProduct);
+
