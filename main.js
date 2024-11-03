@@ -22,8 +22,8 @@ function fetchProducts() {
                 
                     productDiv.innerHTML = `
                         <h2>${product.Name}</h2>
-                        <p>Price: $${Price}</p>
-                        <img src="${Image}" alt="${Name}" />
+                        <p>Price: $${product.Price}</p>
+                        <img src="${product.Image}" alt="${product.Name}" />
                     `;
 
                     productContainer.appendChild(productDiv);
@@ -38,5 +38,4 @@ function fetchProducts() {
             productContainer.innerHTML = '<p>Failed to load products.</p>';
         });
 }
-
-fetchProducts();
+document.addEventListener('DOMContentLoaded', fetchProducts);
